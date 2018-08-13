@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import '../style/App.css';
+import React, { Component } from 'react'
+import '../style/App.css'
+import Horloge from '../components/horloge.js'
+import Compteur from '../components/compteur.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+          <Compteur />
+          <Horloge />
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
