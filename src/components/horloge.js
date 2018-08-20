@@ -6,13 +6,13 @@ class Horloge extends React.Component {
     time : new Date().toLocaleString() ,
   }
 
-  componentDidMount() {
-    setInterval( () => {
-      this.setState({
-        // time : new Date().toLocaleString() ,
-      })
-    },1000)
-  }
+  // componentDidMount() {
+  //   setInterval( () => {
+  //     this.setState({
+  //       // time : new Date().toLocaleString() ,
+  //     })
+  //   },1000)
+  // }
 
   render() {
     console.log(this.state)
