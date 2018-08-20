@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-const browser = navigator.platform
+
 const getUserIP = (onNewIP) => {
 
   //compatibility for firefox and chrome
@@ -60,7 +60,6 @@ class Local extends Component {
     return (
     <div>
       <p>Ip local : {this.state.ipHost}</p>
-      <p>System : {browser} </p>
     </div>
     )
   }

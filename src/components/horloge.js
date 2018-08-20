@@ -15,7 +15,6 @@ class Horloge extends React.Component {
   // }
 
   render() {
-    console.log(this.state)
     return (
       <div className="Moment">
         <p>le {this.state.time}, </p>

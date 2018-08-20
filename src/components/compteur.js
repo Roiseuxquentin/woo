@@ -1,6 +1,10 @@
 import React from 'react'
 
-class Horloge extends React.Component {
+
+// stocK.setItem('likedOEUVRE', `${data},${liked}`)
+
+
+class Compteur extends React.Component {
 
   state = {
     session : 0
@@ -20,7 +24,7 @@ class Horloge extends React.Component {
         <p>pendant {this.state.session} secondes</p>
       </div>
     )
-}
+  }
 }
 
-export default Horloge
+export default Compteur

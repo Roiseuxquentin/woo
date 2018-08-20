@@ -1,10 +1,13 @@
 import React from 'react'
 import Local from '../components/local.js'
 
-const Who = ({props}) => {
+const Who = ({ip}) => {
   return (
     <div>
-     <Local />
+      <h5>Informations</h5>
+      <p>Ip public : {ip} </p>
+      <Local />
+      <p>System : {navigator.platform} </p>
     </div>
   )
 }
