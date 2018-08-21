@@ -4,7 +4,7 @@ import Modal from 'react-responsive-modal';
 
 import '../style/town.css'
 
-import youpi from "../img/home.png"
+import townIcon from "../img/city.png"
 
 class Town extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class Town extends React.Component {
     const { open } = this.state;
     return (
       <div>
-      <img src={youpi} onClick={this.onOpenModal} />
+      <img src={townIcon} onClick={this.onOpenModal} />
         <Modal open={open} onClose={this.onCloseModal} center>
           <h2>Simple centered modal</h2>
         </Modal>

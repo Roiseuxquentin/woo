@@ -4,7 +4,7 @@ import Modal from 'react-responsive-modal';
 
 import '../style/all.css'
 
-import youpi from "../img/home.png"
+import allIcon from "../img/params.png"
 
 class All extends React.Component {
   state = {
@@ -23,7 +23,7 @@ class All extends React.Component {
     const { open } = this.state;
     return (
       <div>
-      <img src={youpi} onClick={this.onOpenModal} />
+      <img src={allIcon} onClick={this.onOpenModal} />
         <Modal open={open} onClose={this.onCloseModal} center>
           <h2>Simple centered modal</h2>
         </Modal>

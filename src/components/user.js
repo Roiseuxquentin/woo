@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-responsive-modal';
 
 import '../style/user.css'
-import youpi from "../img/home.png"
+import userIcon from "../img/user.png"
 
 class User extends React.Component {
   state = {
@@ -22,7 +22,7 @@ class User extends React.Component {
     const { open } = this.state;
     return (
       <div>
-      <img src={youpi} onClick={this.onOpenModal} />
+      <img src={userIcon} onClick={this.onOpenModal} />
         <Modal open={open} onClose={this.onCloseModal} center>
           <h2>Simple centered modal</h2>
         </Modal>

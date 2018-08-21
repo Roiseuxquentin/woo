@@ -10,10 +10,10 @@ import '../style/icons.css'
 
 const Icons = ({props}) => {
   return (
-    <div>
-      <User />
-      <Map />
+    <div className="iconsLine" >
       <Town />
+      <Map />
+      <User />
       <Speed />
       <All />
     </div>
