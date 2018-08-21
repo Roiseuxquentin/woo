@@ -32,9 +32,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        {/* <header className="header"> */}
-          <Icons className="header" />
-        {/* </header> */}
+          <Icons  info={this.state.info} className="header" />
         <div className="from" >
           <From info={this.state.info} />
         </div>

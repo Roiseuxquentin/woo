@@ -8,11 +8,11 @@ import Map from '../components/map.js'
 
 import '../style/icons.css'
 
-const Icons = ({props}) => {
+const Icons = ({info}) => {
   return (
     <div className="iconsLine" >
       <Town />
-      <Map />
+      <Map info={info}/>
       <User />
       <Speed />
       <All />
