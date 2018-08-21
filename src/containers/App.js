@@ -43,7 +43,7 @@ class App extends Component {
           <From info={this.state.info} />
         </div>
         <div className="meteo" >
-          <Meteo info={this.state} />
+          {/* <Meteo info={this.state} /> */}
         </div>
         <div className="who" >
           <Who ip={this.state.ip} />
