@@ -15,7 +15,7 @@ class App extends Component {
 
   state = {
     ip : undefined,
-    town : undefined,
+    info : undefined,
   }
 
   componentDidMount() {
@@ -28,10 +28,10 @@ class App extends Component {
         fetch(`http://api.ipstack.com/${this.state.ip}?access_key=b908dcc9061f0b9644498ae6329f7c3a`)
         .then(req => req.json())
         .then(res => {
-          this.setState({town:res.city})
+          this.setState({info:res})
         })
       })
-  }
+    }
 
   render() {
     return (
@@ -40,10 +40,10 @@ class App extends Component {
           <img src={youpi} />
         </header>
         <div className="from" >
-          <From town={this.state.town} />
+          <From info={this.state.info} />
         </div>
         <div className="meteo" >
-          <Meteo town={this.state.town} />
+          <Meteo info={this.state} />
         </div>
         <div className="who" >
           <Who ip={this.state.ip} />

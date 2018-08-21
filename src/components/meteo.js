@@ -9,19 +9,20 @@ class Meteo extends Component {
     load : false,
   }
 
-  // componentDidUpdate() {
-  //   if ( (!this.state.load) && this.props.town) {
-  //     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.town}&units=metric&APPID=339ca6935cce3023e268810a00f76910`)
-  //     .then(req => req.json())
-  //     .then(res => {
-  //       this.setState({meteoIcon:res.weather[0].icon, meteoTemp:res.main.temp, meteoDesc:res.weather[0].description, load:true})
-  //       console.log(res)
-  //     })
-  //   }
-  // }
+  componentDidUpdate() {
+    if (this.props.info.info && !this.state.load) {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.info.latitude}&lon=${this.props.info.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
+        .then(req => req.json())
+        .then(res => {
+          this.setState({ meteoTemp:res.main.temp,
+                          meteoDesc:res.weather[0].description,
+                          meteoIcon:res.weather[0].icon,
+                          load:true })
+        })
+    }
+  }
 
   render() {
-    console.log(this.props,"youuuuu")
     return (
       <div>
         <img className='' src={`http://openweathermap.org/img/w/${this.state.meteoIcon}.png`} />
