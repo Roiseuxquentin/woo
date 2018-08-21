@@ -12,7 +12,7 @@ html,body {
 }
 
 .header {
-  background-color: rgb(211, 109, 26);
+  background-color: rgba(128, 86, 177, 0.932);
   height: 8vh;
   padding-top: 2vh;
   color: white;
@@ -20,20 +20,20 @@ html,body {
 
 
 .from {
-  background-color: rgba(218, 22, 22, 0.555);
+  background-color: rgba(118, 31, 231, 0.932);
   height: 25vh;
   padding-top: 2vh;
   color: white;
 }
 
 .meteo {
-  background-color: rgba(22, 241, 231, 0.555);
+  background-color: rgba(92, 202, 245, 0.904);
   height: 20vh;
   padding-top: 2vh;
 }
 
 .who {
-  background-color: rgba(177, 33, 153, 0.555);
+  background-color: rgba(85, 185, 147, 0.829);
   height: 40vh;
   padding-top: 2vh;
   color: white;

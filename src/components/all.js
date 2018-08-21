@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-responsive-modal';
 
-import '../style/speed.css'
+import '../style/all.css'
 
 import youpi from "../img/home.png"
 
-class Speed extends React.Component {
+class All extends React.Component {
   state = {
     open: false,
   };
@@ -32,4 +32,4 @@ class Speed extends React.Component {
   }
 }
 
-export default Speed
+export default All

@@ -137,8 +137,8 @@ my-app/
     index.html
     favicon.ico
   src/
-    App.css
-    App.js
+    app.css
+    app.js
     App.test.js
     index.css
     index.js
@@ -442,7 +442,7 @@ const moduleA = 'Hello';
 
 export { moduleA };
 ```
-### `App.js`
+### `app.js`
 
 ```js
 import React, { Component } from 'react';

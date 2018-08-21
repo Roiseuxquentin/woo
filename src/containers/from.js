@@ -3,7 +3,7 @@ import React , { Component } from 'react'
 import Horloge from '../components/horloge.js'
 import Compteur from '../components/compteur.js'
 
-import '../style/App.css'
+import '../style/app.css'
 
 
 class From extends Component {

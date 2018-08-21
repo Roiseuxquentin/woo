@@ -3,13 +3,9 @@ import React, { Component } from 'react'
 import Meteo from '../components/meteo.js'
 import From from '../containers/from.js'
 import Who from '../containers/who.js'
+import Icons from './icons.js'
 
-import '../style/App.css'
-
-import youpi from "../img/home.png"
-
-
-
+import '../style/app.css'
 
 class App extends Component {
 
@@ -37,7 +33,7 @@ class App extends Component {
     return (
       <div className="app">
         <header className="header">
-          <img src={youpi} />
+          <Icons />
         </header>
         <div className="from" >
           <From info={this.state.info} />
