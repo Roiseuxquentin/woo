@@ -49,7 +49,7 @@ class Map extends React.Component {
                     mapProperties={{ basemap: 'streets' }}
                     viewProperties={{
                         center: [(this.state.lon), (this.state.lat)],
-                        scale:12500
+                        scale:11000
                     }}
             />
           </Modal>
