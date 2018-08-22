@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 
 import '../style/speed.css'
 
-import speedIcon from "../img/speed.png"
+import startIcon from "../img/speedStart.png"
+import connectH from "../img/connectH.png"
+import connectM from "../img/connectM.png"
+import connectL from "../img/connectL.png"
 
+let signalIcon = connectL
 const image = 'http://www.supportduweb.com/ftp/ybouane/scripts_astuces/javascript/vitesse_connexion/image.png'
 const size = 158298
 
@@ -17,11 +21,13 @@ let i = 5
 class SpeedUp extends React.Component {
 
   state = {
+    signalIcon : connectL,
     speed:[],
     average:0,
   }
 
   componentDidMount() {
+    this.start()
   }
 
   startDownload = () =>{
@@ -45,18 +51,36 @@ class SpeedUp extends React.Component {
   start = () => {
       const arrTime = [50,200,500,611,750,1000]
       arrTime.forEach(time => setTimeout(() => this.startDownload() , time))
-      setTimeout(() => this.setState({
-        average : Math.round(this.state.speed.reduce((add,speed) => add + speed) / this.state.speed.length)
-      }) , 1100)
-  }
+
+      setTimeout(() => {
+        if (this.state.speed.length > 0) {
+        this.setState({
+          average : Math.round(this.state.speed.reduce((add,speed) => add + speed) / this.state.speed.length)
+        })
+          if (this.state.average < 4000) {
+            this.setState({signalIcon : connectM})
+          }
+          else {
+            this.setState({signalIcon : connectH})
+          }
+        }
+        else {
+          this.setState({signalIcon : connectL})
+        }
+      } , 1100)
+    }
 
   render() {
 
     return (
-      <div>
-        <h2>{this.state.average} Ko/sec</h2>
-        <img src={speedIcon} onClick={this.start} />
-      </div>
+          <div>
+            <img className="icons" src={this.state.signalIcon} />
+            <h5>Vitesse Moyenne de Téléchargement</h5>
+            <div className="displaySpeed" >
+              <h2>{this.state.average} Ko/sec</h2>
+            </div>
+            <img className="startIcon" src={startIcon} onClick={this.start} />
+          </div>
     )
   }
 }

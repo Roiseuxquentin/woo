@@ -1,0 +1,14 @@
+.displaySpeed {
+  display:flex;
+  justify-content: center;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+}
+
+.startIcon {
+  width: 50px;
+  height: 50px;
+}
