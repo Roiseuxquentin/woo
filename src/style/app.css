@@ -1,8 +1,10 @@
 html,body {
+  font-family: 'Syncopate', sans-serif;
+  /* font-family: 'Oxygen', sans-serif; */
+/* font-family: 'Jura', sans-serif; */
   display: flex;
   justify-content: center;
   overflow: hidden;
-  
   text-align: center;
 }
 
@@ -14,17 +16,17 @@ html,body {
 .header {
   background-color: rgb(192, 195, 204);
   height: 10vh;
-
 }
 
 
 .from {
   background-color: rgb(192, 195, 204);
+  font-size: 2vh;
+  /* font-weight: bolder; */
   /* background-color: rgb(2, 36, 81); */
   height: 25vh;
   padding-top: 2vh;
   color: rgb(78, 122, 161);
-
 }
 
 .meteo {
@@ -37,6 +39,7 @@ html,body {
 
 .who {
   background-color: rgb(192, 195, 204);
+  font-size: 2vh;
   height: 40vh;
   padding-top: 2vh;
   color: rgb(78, 122, 161);
