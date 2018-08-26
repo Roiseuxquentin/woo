@@ -29,10 +29,12 @@ html,body {
   background-color: rgba(92, 202, 245, 0.904);
   height: 20vh;
   padding-top: 2vh;
+  color:white;
+  font-size: 20px;
 }
 
 .who {
-  background-color: rgba(85, 185, 147, 0.829);
+  background-color: rgba(154, 151, 184  );
   height: 40vh;
   padding-top: 2vh;
   color: white;

@@ -15,7 +15,7 @@ class Map extends React.Component {
     lon:undefined
   }
 
-  componentWillReceiveProps() {
+  componentWillMount() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition( (position) => {
           this.setState({lat:position.coords.latitude})

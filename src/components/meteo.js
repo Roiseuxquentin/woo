@@ -10,19 +10,18 @@ class Meteo extends Component {
     load : false,
   }
 
-  // componentDidUpdate() {
-  //   if (this.props.info && !this.state.load) {
-  //     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
-  //       .then(req => req.json())
-  //       .then(res => {
-  //         this.setState({ meteoTemp:res.main.temp,
-  //                         meteoDesc:res.weather[0].description,
-  //                         meteoIcon:res.weather[0].icon,
-  //                         load:true })
-  //       })
-  //       console.log('passage NUM')
-  //   }
-  // }
+  componentDidUpdate() {
+    // if (this.props.info && !this.state.load) {
+    //   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
+    //     .then(req => req.json())
+    //     .then(res => {
+    //       this.setState({ meteoTemp:res.main.temp,
+    //                       meteoDesc:res.weather[0].description,
+    //                       meteoIcon:res.weather[0].icon,
+    //                       load:true })
+    //     })
+    // }
+  }
 
   render() {
   //   if (this.state.load){
@@ -40,7 +39,7 @@ class Meteo extends Component {
       color="#00BFFF"
       height="50"	
       width="50"
-   />   
+   />
     )
   // }
   }
