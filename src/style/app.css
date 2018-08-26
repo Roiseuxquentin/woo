@@ -2,7 +2,7 @@ html,body {
   display: flex;
   justify-content: center;
   overflow: hidden;
-
+  
   text-align: center;
 }
 
@@ -12,21 +12,23 @@ html,body {
 }
 
 .header {
-  background-color: rgba(128, 86, 177, 0.932);
+  background-color: rgb(192, 195, 204);
   height: 10vh;
 
 }
 
 
 .from {
-  background-color: rgba(118, 31, 231, 0.932);
+  background-color: rgb(192, 195, 204);
+  /* background-color: rgb(2, 36, 81); */
   height: 25vh;
   padding-top: 2vh;
-  color: white;
+  color: rgb(78, 122, 161);
+
 }
 
 .meteo {
-  background-color: rgba(92, 202, 245, 0.904);
+  background-color:rgb(80, 145, 233);
   height: 20vh;
   padding-top: 2vh;
   color:white;
@@ -34,8 +36,19 @@ html,body {
 }
 
 .who {
-  background-color: rgba(154, 151, 184  );
+  background-color: rgb(192, 195, 204);
   height: 40vh;
   padding-top: 2vh;
+  color: rgb(78, 122, 161);
+}
+
+.footer {
+  /* background-color: rgb(78, 99, 130); */
+  /* background-color: rgb(78, 122, 161); */
+  background-color: rgb(2, 36, 81);
+  height: 10vh;
+  bottom: 0;
+  position: absolute;
   color: white;
+  width: 375px;
 }

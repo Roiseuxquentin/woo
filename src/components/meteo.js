@@ -1,6 +1,7 @@
 import React , { Component } from 'react'
 import Loader from 'react-loader-spinner'
 
+import '../style/app.css'
 
 class Meteo extends Component {
   state = {
@@ -34,12 +35,14 @@ class Meteo extends Component {
   // }
   // else {
     return (
+      <div className='meteo' >
       <Loader 
       type="ThreeDots"
       color="#00BFFF"
       height="50"	
       width="50"
    />
+      </div>
     )
   // }
   }

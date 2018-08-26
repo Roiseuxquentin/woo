@@ -5,7 +5,6 @@ import Compteur from '../components/compteur.js'
 
 import '../style/app.css'
 
-
 class From extends Component {
 
   state = {
@@ -33,7 +32,7 @@ class From extends Component {
 
   render() {
     return (
-      <div>
+      <div className="from" >
       <p>{this.state.message}</p>
         <Horloge />
         <Compteur />

@@ -1,9 +1,11 @@
 import React from 'react'
 import Local from '../components/local.js'
 
+import '../style/app.css'
+
 const Who = ({ip}) => {
   return (
-    <div>
+    <div className='who' >
       <h5>Informations</h5>
       <p>Ip public : {ip} </p>
       <p>Ip locale : <Local /> </p>

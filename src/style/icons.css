@@ -1,5 +1,8 @@
 .iconsLine {
-  background-color: rgba(128, 86, 177, 0.932);
+  background-color: rgb(2, 36, 81);
+
+  /* background-color: rgb(192, 195, 204); */
+  /* background-color: rgba(128, 86, 177, 0.932); */
   color: white;
 
   height: 6vh;
