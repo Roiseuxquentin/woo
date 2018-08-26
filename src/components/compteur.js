@@ -1,9 +1,5 @@
 import React from 'react'
 
-
-// stocK.setItem('likedOEUVRE', `${data},${liked}`)
-
-
 class Compteur extends React.Component {
 
   state = {
@@ -16,7 +12,7 @@ class Compteur extends React.Component {
         session : (this.state.session + 1)
       })
       if ((this.state.session % 10) === 0 ) {
-        localStorage.averageTime = Number(localStorage.averageTime) + 10
+        localStorage.totalTime = Number(localStorage.totalTime) + 10
       }
     },1000)
   }

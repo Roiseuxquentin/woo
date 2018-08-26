@@ -6,7 +6,7 @@ const Who = ({ip}) => {
     <div>
       <h5>Informations</h5>
       <p>Ip public : {ip} </p>
-      <Local />
+      <p>Ip locale : <Local /> </p>
       <p>System : {navigator.platform} </p>
     </div>
   )

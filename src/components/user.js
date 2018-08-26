@@ -12,12 +12,12 @@ class User extends React.Component {
     os:undefined,
     lang:undefined,
     nbVisit:undefined,
-    averageTime:undefined,
-
+    totalTime:undefined,
   }
-componentDidMount() {
-  this.setState({os : navigator.platform})
-}
+
+  componentDidMount() {
+    this.setState({os : navigator.platform})
+  }
   componentWillMount() {
 
     if (this.props.info) {
@@ -25,9 +25,8 @@ componentDidMount() {
     this.setState({lang : this.props.info.location.languages[0].native})
     }
     if (localStorage.visitCount) {
-                                               console.log(localStorage,'localStorage')
       this.setState({nbVisit : localStorage.visitCount})
-      this.setState({averageTime : localStorage.averageTime})
+      this.setState({totalTime : localStorage.totalTime})
     }
   }
 
@@ -49,7 +48,8 @@ componentDidMount() {
           <p>ip : {this.state.ip}</p>
           <p>language : {this.state.lang}</p>
           <p>nombre de visites : {this.state.nbVisit}</p>
-          <p>Temps Moyen sur le site : {Math.floor(this.state.averageTime % 3600 / 60)} min {this.state.averageTime % 3600 % 60} sec</p>
+          <p>Temps Moyen sur le site : {Math.floor(this.state.totalTime % 3600 / 60)} min(s)
+                                                   {this.state.totalTime % 3600 % 60} sec</p>
           <p>System : {this.state.os}</p>
         </Modal>
       </div>

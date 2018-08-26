@@ -18,7 +18,7 @@ const Icons = ({info}) => {
       <Map info={info} />
       <User info={info} />
       <Speed />
-      <All />
+      <All info={info} />
     </div>
   )
 }

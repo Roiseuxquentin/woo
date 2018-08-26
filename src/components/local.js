@@ -56,11 +56,7 @@ class Local extends Component {
 
 
   render() {
-    return (
-    <div>
-      <p>Ip local : {this.state.ipHost}</p>
-    </div>
-    )
+    return ( <div>{this.state.ipHost}</div>    )
   }
 }
 

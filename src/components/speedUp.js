@@ -30,6 +30,10 @@ class SpeedUp extends React.Component {
     this.start()
   }
 
+  componentWillMount() {
+    console.log("jesuis monte sur un poney de deit moyen a foutre dans un localstourAge")
+  }
+
   startDownload = () =>{
       time1 = new Date()
       time1 = time1.getTime()
