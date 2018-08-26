@@ -10,12 +10,13 @@ import Map from '../components/map.js'
 import '../style/icons.css'
 
 const Icons = ({info}) => {
+  console.log(info)
   if (info) {
     return (
       <div className="iconsLine" >
-      <Town info={info } />
+      <Town info={info} />
       <Map info={info} />
-      <User />
+      <User info={info} />
       <Speed />
       <All />
     </div>

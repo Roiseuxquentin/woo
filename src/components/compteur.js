@@ -15,6 +15,9 @@ class Compteur extends React.Component {
       this.setState({
         session : (this.state.session + 1)
       })
+      if ((this.state.session % 10) === 0 ) {
+        localStorage.averageTime = Number(localStorage.averageTime) + 10
+      }
     },1000)
   }
 
