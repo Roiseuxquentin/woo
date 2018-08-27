@@ -1,7 +1,6 @@
 html,body {
-  font-family: 'Syncopate', sans-serif;
-  /* font-family: 'Oxygen', sans-serif; */
-/* font-family: 'Jura', sans-serif; */
+  /* font-family: 'Syncopate', sans-serif; */
+  font-family: 'Jura', sans-serif;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -10,7 +9,8 @@ html,body {
 
 .app {
   width: 375px;
-  border: solid 2px rgb(151, 124, 175);
+  border: solid 0.1vw rgb(111, 165, 241);
+  padding: 0.4%;
 }
 
 .header {
@@ -18,23 +18,41 @@ html,body {
   height: 10vh;
 }
 
-
 .from {
   background-color: rgb(192, 195, 204);
   font-size: 2vh;
-  /* font-weight: bolder; */
   /* background-color: rgb(2, 36, 81); */
   height: 25vh;
-  padding-top: 2vh;
+  padding-top: 1vh;
   color: rgb(78, 122, 161);
+}
+.paillette {
+  padding: 0;
+  margin:0;
+  border-top : solid 1px rgb(111, 165, 241);
+  border-bottom : solid 1px rgb(111, 165, 241);
+}
+.time {
+  margin: -2vh;
 }
 
 .meteo {
   background-color:rgb(80, 145, 233);
+  border-top: solid 0.2vh white;
+  border-bottom: solid 0.2vh white;
   height: 20vh;
   padding-top: 2vh;
   color:white;
   font-size: 20px;
+}
+.underLine {
+  /* text-decoration: underline rgb(2, 36, 81); */
+}
+.meteoImg {
+  border: solid 1px white;
+  height: 4vh;
+  width: 4vh;
+  margin-bottom : -0.5vh;
 }
 
 .who {
@@ -44,14 +62,23 @@ html,body {
   padding-top: 2vh;
   color: rgb(78, 122, 161);
 }
+.moduleLine {
+  display: flex;
+  justify-content: center;
+}
 
 .footer {
-  /* background-color: rgb(78, 99, 130); */
-  /* background-color: rgb(78, 122, 161); */
   background-color: rgb(2, 36, 81);
+  border-top: solid 0.2vh white;
+  padding-top: 0.4%;
   height: 10vh;
   bottom: 0;
   position: absolute;
   color: white;
   width: 375px;
+}
+.recap {
+  margin-left:86px;
+  bottom: 1vh;
+  position: absolute;
 }

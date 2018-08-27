@@ -6,11 +6,16 @@ import '../style/app.css'
 const Who = ({ip}) => {
   return (
     <div className='who' >
-      <h5>Informations</h5>
-      <p>Ip public : {ip} </p>
-      <p>Ip locale : <Local /> </p>
-      <p>System : {navigator.platform} </p>
+      <p>System : {navigator.platform}
+      <br />
+      <div className='moduleLine'>
+        ip local : .<Local />
+      </div>
+      cookies : {(navigator.cookieEnabled) ? 'activés' : 'désactivé'}
+      <br />
+      fournisseur : </p>
     </div>
   )
 }
 export default Who
+

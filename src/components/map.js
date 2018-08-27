@@ -4,8 +4,10 @@ import Modal from 'react-responsive-modal'
 import { Scene } from 'react-arcgis'
 import Loader from 'react-loader-spinner'
 
-import '../style/map.css'
+import '../style/icons.css'
+
 import mapIcon from "../img/map.png"
+import streetView from "../img/street-view.png"
 
 class Map extends React.Component {
 
@@ -43,9 +45,23 @@ class Map extends React.Component {
       return (
         <div>
         <img src={mapIcon} onClick={this.onOpenModal} />
-          <Modal open={open} onClose={this.onCloseModal} center>
+          <Modal open={open} onClose={this.onCloseModal}
+            center
+            classNames={{
+              transitionEnter: 'transition-enter',
+              transitionEnterActive: 'transition-enter-active',
+              transitionExit: 'transition-exit-active',
+              transitionExitActive: 'transition-exit-active',
+              overlay: 'custom-overlay',
+              modal: 'custom-modal'
+            }}
+            animationDuration={1000}>
+            <div className="textColor">
+            latitude<img src={streetView} />longitude
+            </div>
+            <p className="underLoc" >({this.state.lat.toPrecision(5)}),({this.state.lon.toPrecision(5)})</p>
             <Scene  className='displayMap'
-                    style={{ width: '40vw', height: '40vh' }}
+                    style={{ width: '39vw', height: '40vh' }}
                     mapProperties={{ basemap: 'streets' }}
                     viewProperties={{
                         center: [(this.state.lon), (this.state.lat)],

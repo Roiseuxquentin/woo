@@ -79,7 +79,8 @@ class SpeedUp extends React.Component {
     return (
           <div>
             <img className="icons" src={this.state.signalIcon} />
-            <h5>Vitesse Moyenne de Téléchargement</h5>
+            <h5 className="underLoc" >Vitesse Moyenne de Téléchargement</h5>
+            <hr />
             <div className="displaySpeed" >
               <h2>{this.state.average} Ko/sec</h2>
             </div>

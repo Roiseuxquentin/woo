@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../style/app.css'
+
 class Compteur extends React.Component {
 
   state = {

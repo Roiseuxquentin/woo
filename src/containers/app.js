@@ -35,10 +35,10 @@ class App extends Component {
     return (
       <div className="app">
         <Icons  info={this.state.info} />
-        <From  info={this.state.info}  />
+        <From  ip={this.state.ip}  />
         <Meteo info={this.state.info} />
         <Who ip={this.state.ip} />
-        <Footer />
+        <Footer info={this.state.info} />
       </div>
     )
   }

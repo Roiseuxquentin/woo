@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Modal from 'react-responsive-modal'
 
-import '../style/user.css'
+import '../style/icons.css'
 import userIcon from "../img/user.png"
+import userIconModal from "../img/userInfo.png"
 
 class User extends React.Component {
   state = {
@@ -43,12 +44,23 @@ class User extends React.Component {
     return (
       <div>
       <img src={userIcon} onClick={this.onOpenModal} />
-        <Modal open={open} onClose={this.onCloseModal} center>
-          <h2>Visiteur</h2>
-          <p>ip : {this.state.ip}</p>
-          <p>language : {this.state.lang}</p>
+        <Modal open={open} onClose={this.onCloseModal} 
+          center
+          classNames={{
+            transitionEnter: 'transition-enter',
+            transitionEnterActive: 'transition-enter-active',
+            transitionExit: 'transition-exit-active',
+            transitionExitActive: 'transition-exit-active',
+            overlay: 'custom-overlay',
+            modal: 'custom-modal'
+          }}
+          animationDuration={1000}  >
+          <img src={userIconModal} />
+          <hr />
+          <p className="ip , underLoc" >{this.state.ip}</p>
+          <p>langage : {this.state.lang}</p>
           <p>nombre de visites : {this.state.nbVisit}</p>
-          <p>Temps Moyen sur le site : {Math.floor(this.state.totalTime % 3600 / 60)} min(s)
+          <p>Temps Total sur le site : {Math.floor(this.state.totalTime % 3600 / 60)} min(s)
                                                    {this.state.totalTime % 3600 % 60} sec</p>
           <p>System : {this.state.os}</p>
         </Modal>

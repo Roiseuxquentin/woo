@@ -44,7 +44,7 @@ class Local extends Component {
 
 
   state = {
-    ipHost: "45.45.45",
+    ipHost: "127.0.0.1",
   }
 
   componentWillMount() {

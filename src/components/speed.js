@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Modal from 'react-responsive-modal'
 
 import SpeedUp from './speedUp.js'
+import '../style/icons.css'
 import '../style/speed.css'
 
 import speedIcon from "../img/speed.png"
@@ -28,7 +29,17 @@ class Speed extends React.Component {
     return (
       <div>
       <img src={speedIcon} onClick={this.onOpenModal} />
-        <Modal open={open} onClose={this.onCloseModal} center>
+        <Modal open={open} onClose={this.onCloseModal} 
+          center
+          classNames={{
+            transitionEnter: 'transition-enter',
+            transitionEnterActive: 'transition-enter-active',
+            transitionExit: 'transition-exit-active',
+            transitionExitActive: 'transition-exit-active',
+            overlay: 'custom-overlay',
+            modal: 'custom-modal'
+          }}
+          animationDuration={1000}  >
           <SpeedUp />
         </Modal>
       </div>

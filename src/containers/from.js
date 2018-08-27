@@ -9,6 +9,7 @@ class From extends Component {
 
   state = {
     message:undefined,
+    ip:undefined,
   }
 
   componentWillMount() {
@@ -22,6 +23,9 @@ class From extends Component {
       this.setState({message : `Premiere visite !!`})
       localStorage.recap = `Premiere visite : le ${Date().toLocaleString()} .`
     }
+    if (this.props.ip) {
+      this.setState({ip : this.props.ip})
+    }
   }
 
   componentDidMount() {
@@ -33,9 +37,12 @@ class From extends Component {
   render() {
     return (
       <div className="from" >
-      <p>{this.state.message}</p>
+        <h1>{this.state.ip}</h1>
+        <div className="paillette" >{this.state.message}</div>
         <Horloge />
-        <Compteur />
+        <div className='time' >
+          <Compteur />
+        </div>
       </div>
     )
   }

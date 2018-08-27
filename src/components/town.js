@@ -2,9 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Modal from 'react-responsive-modal'
 
-import '../style/town.css'
+import '../style/icons.css'
 
 import townIcon from "../img/city.png"
+import houseIcon from "../img/home.png"
 
 class Town extends React.Component {
   state = {
@@ -15,7 +16,6 @@ class Town extends React.Component {
     region:undefined,
     pop : undefined,
     pays : undefined,
-    nom : undefined,
   }
 
   componentWillMount() {
@@ -44,14 +44,25 @@ class Town extends React.Component {
     const { open } = this.state
     return (
       <div>
-      <img src={townIcon} onClick={this.onOpenModal} />
-        <Modal open={open} onClose={this.onCloseModal} center>
-          <h2>Informations :</h2>
-          <p>ville : {this.state.nom} </p>
-          <p>nombre d'habitants : {this.state.pop} </p>
-          <p>code Postal : {this.state.codePostal} </p>
-          <p>région : {this.state.region} </p>
-          <p>pays : {this.state.pays} </p>
+        <img src={townIcon} onClick={this.onOpenModal} />
+          <Modal open={open} onClose={this.onCloseModal} center
+            classNames={{
+                transitionEnter: 'transition-enter',
+                transitionEnterActive: 'transition-enter-active',
+                transitionExit: 'transition-exit-active',
+                transitionExitActive: 'transition-exit-active',
+                overlay: 'custom-overlay',
+                modal: 'custom-modal'
+                }}
+              animationDuration={1000}>
+
+            <img src={houseIcon} />
+            <hr />
+            <p>ville : {this.state.nom} </p>
+            <p>nombre d'habitants : {this.state.pop} </p>
+            <p>code Postal : {this.state.codePostal} </p>
+            <p>région : {this.state.region} </p>
+            <p>pays : {this.state.pays} </p>
         </Modal>
       </div>
     )
