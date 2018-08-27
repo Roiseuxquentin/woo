@@ -20,6 +20,9 @@ class From extends Component {
     }
     else {
       localStorage.visitCount = 1
+      localStorage.debit = 0
+      localStorage.totalTime = 0
+
       this.setState({message : `Premiere visite !!`})
       localStorage.recap = `Premiere visite : le ${Date().toLocaleString()} .`
     }
@@ -38,6 +41,7 @@ class From extends Component {
     return (
       <div className="from" >
         <h1 className="ip" >{this.state.ip}</h1>
+        <hr />
         <div className="paillette" >
           {this.state.message}
         </div>

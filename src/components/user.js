@@ -18,11 +18,8 @@ class User extends React.Component {
 
   componentDidMount() {
     this.setState({os : navigator.platform})
-  }
-  componentWillMount() {
-
     if (this.props.info) {
-    this.setState({ip : this.props.info.ip})
+    this.setState({ip : this.props.ip})
     this.setState({lang : this.props.info.location.languages[0].native})
     }
     if (localStorage.visitCount) {
@@ -31,7 +28,12 @@ class User extends React.Component {
     }
   }
 
+  componentWillMount() {
+
+  }
+
   onOpenModal = () => {
+    this.setState({ip : this.props.ip})
     this.setState({ open: true })
   }
 
@@ -44,7 +46,7 @@ class User extends React.Component {
     return (
       <div>
       <img src={userIcon} onClick={this.onOpenModal} />
-        <Modal open={open} onClose={this.onCloseModal} 
+        <Modal open={open} onClose={this.onCloseModal}
           center
           classNames={{
             transitionEnter: 'transition-enter',
@@ -56,8 +58,7 @@ class User extends React.Component {
           }}
           animationDuration={1000}  >
           <img src={userIconModal} />
-          <hr />
-          <p className="ip , underLoc" >{this.state.ip}</p>
+          <div className='ipPublic' >{(this.state.ip)? this.state.ip : '127.0.0.1'}</div>
           <p>langage : {this.state.lang}</p>
           <p>nombre de visites : {this.state.nbVisit}</p>
           <p>Temps Total sur le site : {Math.floor(this.state.totalTime % 3600 / 60)} min(s)

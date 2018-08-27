@@ -18,18 +18,28 @@ class Map extends React.Component {
   }
 
   componentWillMount() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition( (position) => {
-          this.setState({lat:position.coords.latitude})
-          this.setState({lon:position.coords.longitude})
-          })
-    }
-    else {
-      this.setState({lat:this.props.info.latitude})
-      this.setState({lon:this.props.info.longitude})
-    }
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition( (position) => {
+    //       this.setState({lat:position.coords.latitude, lon:position.coords.longitude})
+    //       })
+    // }
+    // else {
+    // }
+    if (!this.state.latitude)
+      this.setState({lat:this.props.info.latitude , lon:this.props.info.longitude})
   }
 
+  componentDidMount() {
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition( (position) => {
+    //     this.setState({lat:position.coords.latitude, lon:position.coords.longitude})
+    //     })
+    // }
+    // else {
+    // }
+    if (!this.state.latitude)
+      this.setState({lat:this.props.info.latitude , lon:this.props.info.longitude})
+  }
 
   onOpenModal = () => {
     this.setState({ open: true })
@@ -59,13 +69,13 @@ class Map extends React.Component {
             <div className="textColor">
             latitude<img src={streetView} />longitude
             </div>
-            <p className="underLoc" >({this.state.lat.toPrecision(5)}),({this.state.lon.toPrecision(5)})</p>
+            <p className="underLoc" >({this.state.lat.toPrecision(5)}...),({this.state.lon.toPrecision(5)}...)</p>
             <Scene  className='displayMap'
-                    style={{ width: '39vw', height: '40vh' }}
+                    style={{ width: 'auto', height: '40vh' }}
                     mapProperties={{ basemap: 'streets' }}
                     viewProperties={{
                         center: [(this.state.lon), (this.state.lat)],
-                        scale:11000
+                        scale:15000
                     }}
             />
           </Modal>

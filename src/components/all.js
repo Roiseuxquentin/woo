@@ -8,9 +8,11 @@ import '../style/icons.css'
 import allIcon from "../img/params.png"
 import eyeIcon from "../img/eyes.png"
 
+
 class All extends React.Component {
   state = {
     open: false,
+    openSecondModal: false,
     ip : undefined,
     os : undefined,
     info : undefined,
@@ -18,27 +20,43 @@ class All extends React.Component {
     debit : undefined,
     totalTime : undefined,
   }
-
+  
   componentDidMount() {
-    this.setState({os : navigator.platform})
-    this.setState({nbCo : localStorage.visitCount})
-    this.setState({totalTime : localStorage.totalTime})
-    this.setState({debit : localStorage.debit})
+    this.setState({os : navigator.platform,
+      nbCo : localStorage.visitCount,
+      totalTime : localStorage.totalTime,
+      debit : localStorage.debit})
+      
   }
   componentWillMount() {
     if (this.props.info) {
-      this.setState({ip : this.props.info.ip})
-      this.setState({info : this.props.info})
+      this.setState({ip : this.props.info.ip, info : this.props.info})
     }
     (navigator.platform) ? this.setState({os : navigator.platform}) : console.log("pas d'os")
   }
-
+  
   onOpenModal = () => {
     this.setState({ open: true })
   }
-
+  
   onCloseModal = () => {
     this.setState({ open: false })
+  }
+  
+  onOpenSecondModal = () => {
+    this.setState({ openSecondModal: true })
+  }
+  
+  onCloseSecondModal = () => {
+    this.setState({ openSecondModal: false })
+  }
+
+  logHist = () => {
+    const logSplited = localStorage.recap.split('')
+    const logMapped = logSplited.map( elt => {
+      return (<li>{elt}</li>)
+    })
+    return logMapped
   }
 
   render() {
@@ -73,9 +91,14 @@ class All extends React.Component {
               <li>temps total de connection : {Math.floor(this.state.totalTime % 3600 / 60)} min
                                                           {this.state.totalTime % 3600 % 60} sec </li>
               <li>temps moyen par connection : {Math.floor(Number(this.state.totalTime) / Number(this.state.nbCo))} sec </li>
-              <li>débit moyen de connection : {this.state.debit} </li>
+              {/* <li>débit moyen de connection : {this.state.debit} </li> */}
             </ul>
+            <button >
+            {/* </button>className="btn btn-action" onClick={this.onOpenSecondModal}> */}
+            Historiques des connections
+            </button>
           </div>
+            <br />
         </Modal>
       </div>
     )

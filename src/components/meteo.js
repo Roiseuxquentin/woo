@@ -9,7 +9,7 @@ class Meteo extends Component {
     metedoTemp : "19.75",
     meteoDesc : "overcast clouds",
     meteoIcon : undefined,
-    load : true,
+    load : false,
   }
 
   componentDidUpdate() {

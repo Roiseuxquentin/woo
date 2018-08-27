@@ -26,8 +26,8 @@ html,body {
 }
 .ip {
   color:white;
-  border-bottom : solid 1px rgb(111, 165, 241);
   margin-top:0vh;
+  margin-bottom:0.5vh;
 }
 .paillette {
   text-decoration: underline white;
@@ -39,17 +39,16 @@ html,body {
 }
 .moment {
   display:inline;
-  /* justify-content: row; */
 }
 .timer {
-  color: white;
+  color: rgb(80, 145, 233);
   font-size:3vh;
 }
 
 .meteo {
   background-color:rgb(80, 145, 233);
-  border-top: solid 0.2vh white;
-  border-bottom: solid 0.2vh white;
+  border-top: solid 0.4vh white;
+  border-bottom: solid 0.4vh white;
   height: 20vh;
   padding-top: 2vh;
   color:white;
@@ -76,6 +75,10 @@ html,body {
   padding-top: 2vh;
   color: rgb(78, 122, 161);
 }
+.log {
+  font-size: 9px;
+}
+
 .moduleLine {
   display: flex;
   justify-content: center;
@@ -94,4 +97,9 @@ html,body {
   margin-left:86px;
   bottom: 1vh;
   position: absolute;
+}
+
+.about {
+  position: fixed;
+  left: 2vw;
 }

@@ -1,8 +1,9 @@
 import React from 'react'
+import Loader from 'react-loader-spinner'
 
 import All from '../components/all.js'
-
 import '../style/app.css'
+
 const Footer = ({info}) => {
 
   if (info) {
@@ -15,7 +16,15 @@ const Footer = ({info}) => {
     )
   }
   else {
-    return (<div>loader</div>)
+    return (
+    <div>
+      <Loader
+        type="Oval"
+        color="white"
+        height={40}
+        width={40}
+      />
+    </div>)
   }
 }
 

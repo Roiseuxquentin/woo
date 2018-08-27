@@ -1,15 +1,11 @@
 .iconsLine {
-  background-color: rgb(2, 36, 81);
-  padding-bottom : 0.4%;
-  border-bottom: solid 0.2vh rgb(111, 165, 241);
-
-  color: white;
-
-  height: 6vh;
-  padding: 2vh;
-
   display: flex;
   justify-content: space-around;
+  border-bottom: solid 0.2vh white;
+  background-color: rgb(2, 36, 81);
+  padding-bottom : 0.4%;
+  height: 6vh;
+  padding: 2vh;
 }
 
 ul li {
@@ -39,6 +35,12 @@ ul li {
   text-align: left;
 }
 
+.ipPublic {
+  color:rgb(111, 165, 241);
+  border-bottom : solid 1px rgb(111, 165, 241);
+  margin-top:0vh;
+}
+
 .custom-overlay {
   background: rgba(2, 36, 81, 0.7);
 }
@@ -64,6 +66,7 @@ ul li {
 }
 
 
+
 .transition-enter {
   transform: scale(0);
 }
@@ -77,4 +80,8 @@ ul li {
 .transition-exit-active {
   transform: scale(0);
   transition: transform 1000ms ease;
+}
+
+.displayMap {
+  overflow: hidden;
 }
