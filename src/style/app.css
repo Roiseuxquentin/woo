@@ -9,8 +9,7 @@ html,body {
 
 .app {
   width: 375px;
-  border: solid 0.1vw rgb(111, 165, 241);
-  padding: 0.4%;
+  border: solid 1px white;
 }
 
 .header {
@@ -21,19 +20,30 @@ html,body {
 .from {
   background-color: rgb(192, 195, 204);
   font-size: 2vh;
-  /* background-color: rgb(2, 36, 81); */
   height: 25vh;
   padding-top: 1vh;
   color: rgb(78, 122, 161);
 }
-.paillette {
-  padding: 0;
-  margin:0;
-  border-top : solid 1px rgb(111, 165, 241);
+.ip {
+  color:white;
   border-bottom : solid 1px rgb(111, 165, 241);
+  margin-top:0vh;
 }
-.time {
-  margin: -2vh;
+.paillette {
+  text-decoration: underline white;
+  margin-top:-0.8vh;
+}
+.count {
+  margin: -1.8vh;
+  font-size: 2vh;
+}
+.moment {
+  display:inline;
+  /* justify-content: row; */
+}
+.timer {
+  color: white;
+  font-size:3vh;
 }
 
 .meteo {
@@ -45,14 +55,18 @@ html,body {
   color:white;
   font-size: 20px;
 }
-.underLine {
-  /* text-decoration: underline rgb(2, 36, 81); */
+.meteoTxt {
+  font-size: 2vh;
 }
 .meteoImg {
   border: solid 1px white;
   height: 4vh;
   width: 4vh;
   margin-bottom : -0.5vh;
+}
+.city {
+  text-decoration: underline white;
+  font-size: 2vh;
 }
 
 .who {
@@ -69,12 +83,11 @@ html,body {
 
 .footer {
   background-color: rgb(2, 36, 81);
-  border-top: solid 0.2vh white;
+  border-top: solid 0.2vh rgb(111, 165, 241);
   padding-top: 0.4%;
   height: 10vh;
+  position: fixed;
   bottom: 0;
-  position: absolute;
-  color: white;
   width: 375px;
 }
 .recap {

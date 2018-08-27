@@ -21,8 +21,10 @@ class Compteur extends React.Component {
 
   render() {
     return (
-      <div className="Moment">
-        <p>pendant {this.state.session} secondes</p>
+      <div className="moment">
+        <p>pendant <div className="timer">
+        {this.state.session}
+        </div> secondes</p>
       </div>
     )
   }

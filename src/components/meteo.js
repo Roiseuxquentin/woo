@@ -6,15 +6,19 @@ import '../style/app.css'
 class Meteo extends Component {
   state = {
     town : undefined,
-    metedoTemp : undefined,
-    meteoDesc : undefined,
+    metedoTemp : "19.75",
+    meteoDesc : "overcast clouds",
     meteoIcon : undefined,
-    load : false,
+    load : true,
   }
 
   componentDidUpdate() {
-    if (this.props.info && !this.state.load) {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
+    if (this.props.info && !this.state.town){
+      this.setState({town:this.props.info.city})
+    }
+    else if (this.props.info && !this.state.load) {
+      // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=339ca6935cce3023e268810a00f76910`)
         .then(req => req.json())
         .then(res => {
           this.setState({ meteoTemp:res.main.temp,
@@ -22,12 +26,9 @@ class Meteo extends Component {
                           meteoIcon:res.weather[0].icon,
                           load:true,
                         })
-                        console.log(this.props.info,'this.props.info')
+                        console.log(this.props.info,'this.props.info meteo')
         })
-      }
-          if (this.props.info && !this.state.town){
-            this.setState({town:this.props.info.city})
-          }
+    }
   }
 
   render() {
@@ -35,9 +36,8 @@ class Meteo extends Component {
       return (
         <div className='meteo' >
           <img className='meteoImg' src={`http://openweathermap.org/img/w/${this.state.meteoIcon}.png`} />
-          <p className="underLine" > {this.state.town} </p>
-          <hr />
-          <p className='' > {this.state.meteoTemp} °C ,  {this.state.meteoDesc}</p>
+          <p className="city" > {this.state.town} </p>
+          <p className='meteoTxt' > {this.state.meteoTemp} °C ,  {this.state.meteoDesc}</p>
         </div>
     )
   }

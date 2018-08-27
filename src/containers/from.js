@@ -37,10 +37,14 @@ class From extends Component {
   render() {
     return (
       <div className="from" >
-        <h1>{this.state.ip}</h1>
-        <div className="paillette" >{this.state.message}</div>
-        <Horloge />
-        <div className='time' >
+        <h1 className="ip" >{this.state.ip}</h1>
+        <div className="paillette" >
+          {this.state.message}
+        </div>
+        <div className='count' >
+          <Horloge className="count" />
+</div>
+        <div className='count' >
           <Compteur />
         </div>
       </div>
