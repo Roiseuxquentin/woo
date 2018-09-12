@@ -36,7 +36,7 @@ class Speed extends React.Component {
           animationDuration={1000}  >
             <h1> En cour de dev...</h1>
             <hr />
-            <p>Aucune donnée n'est conservée sur ce site, uniquement sur votre navigateur internet. </p>
+            <p>Aucune donnée n'est conservée sur ce site. </p>
         </Modal>
       </div>
     )

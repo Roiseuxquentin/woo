@@ -31,7 +31,7 @@ class SpeedUp extends React.Component {
   }
 
   componentWillMount() {
-    console.log("jesuis monte sur un poney de deit moyen a foutre dans un localstourAge")
+
   }
 
   startDownload = () =>{
