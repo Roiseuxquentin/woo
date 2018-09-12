@@ -17,8 +17,8 @@ class Meteo extends Component {
       this.setState({town:this.props.info.city})
     }
     else if (this.props.info && !this.state.load) {
-      // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=e20b116c6da0d1aa91b14288e72ff616`)
-      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=339ca6935cce3023e268810a00f76910`)
+      // fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.info.latitude}&lon=${this.props.info.longitude}&units=metric&APPID=`)
         .then(req => req.json())
         .then(res => {
           this.setState({ meteoTemp:res.main.temp,
