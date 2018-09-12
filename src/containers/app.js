@@ -32,7 +32,7 @@ class App extends Component {
         this.setState({ip:res.ip})
       })
       .then( res => {
-        fetch(`http://api.ipstack.com/${this.state.ip}?access_key=b908dcc9061f0b9644498ae6329f7c3a`)
+        fetch(`http://api.ipstack.com/${this.state.ip}?access_key=/* ICIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */`)
         .then(req => req.json())
         .then(res => {
           this.setState({info:res})
